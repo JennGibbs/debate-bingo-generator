@@ -65,10 +65,10 @@ function generateBingoCard(imageSrc, bingoItems) {
     }
 
     const bingoContent = document.getElementById('bingo-content');
-    bingoContent.innerHTML = '';
+    bingoContent.innerHTML = ''; // Clear previous items
 
     const cardFrame = document.getElementById('card-frame');
-    cardFrame.src = `./assets/${imageSrc}`;
+    cardFrame.src = `./assets/${imageSrc}`; // Set the card frame image source
 
     const gridTemplate = [
         [0, 1, 2, 3, 4],
