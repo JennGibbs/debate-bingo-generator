@@ -8,16 +8,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 </head>
 <body style="background-color: white;">
-    <div class="container">
+    <div class="header">
         <h1>Trump Debate Bingo Card</h1>
-        <div id="bingo-card">
-            <img id="card-frame" src="./assets/trump-bingo-card.png" alt="Bingo Card Frame">
-            <div id="bingo-content"></div>
-        </div>
         <button onclick="generateTrumpCard()">Generate Again</button>
         <button onclick="window.print()">Print Bingo Card</button>
         <button onclick="downloadPDF()">Download Bingo Card as PDF</button>
     </div>
+    
+    <div class="bingo-container">
+        <div id="bingo-card">
+            <img id="card-frame" src="./assets/trump-bingo-card.png" alt="Bingo Card Frame">
+            <div id="bingo-content"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script>
         generateTrumpCard();
