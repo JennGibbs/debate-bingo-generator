@@ -4,26 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debate Bingo Card Generator</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script> <!-- External JS library for PDF download -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Select Your Debate Bingo Card</h1>
-        <button onclick="generateTrumpCard()">Generate Trump Bingo Card</button>
-        <button onclick="generateHarrisCard()">Generate Harris Bingo Card</button>
-        <button onclick="generateVanceCard()">Generate JD Vance Bingo Card</button>
-        <button onclick="generateWalzCard()">Generate Tim Walz Bingo Card</button>
+        <button onclick="window.location.href='trump-bingo.html'">Generate Trump Bingo Card</button>
+        <button onclick="window.location.href='harris-bingo.html'">Generate Harris Bingo Card</button>
+        <button onclick="window.location.href='vance-bingo.html'">Generate JD Vance Bingo Card</button>
+        <button onclick="window.location.href='walz-bingo.html'">Generate Tim Walz Bingo Card</button>
     </div>
-    
-    <div id="bingo-card">
-        <img id="card-frame" src="" alt="Bingo Card Frame">
-        <div id="bingo-content"></div>
-    </div>
-    
-    <button id="print-button" onclick="window.print()">Print Bingo Card</button>
-    <button id="download-pdf" onclick="downloadPDF()">Download Bingo Card as PDF</button>
-    
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
