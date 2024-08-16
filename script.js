@@ -39,36 +39,33 @@ const items = {
 
 function generateTrumpCard() {
     const bingoItems = [...items.trump];
-    generateBingoCard('trump-bingo-card.png', bingoItems);
+    generateBingoCard(bingoItems);
 }
 
 function generateHarrisCard() {
     const bingoItems = [...items.harris];
-    generateBingoCard('harris-bingo-card.png', bingoItems);
+    generateBingoCard(bingoItems);
 }
 
 function generateVanceCard() {
     const bingoItems = [...items.vance];
-    generateBingoCard('vance-bingo-card.png', bingoItems);
+    generateBingoCard(bingoItems);
 }
 
 function generateWalzCard() {
     const bingoItems = [...items.walz];
-    generateBingoCard('walz-bingo-card.png', bingoItems);
+    generateBingoCard(bingoItems);
 }
 
-function generateBingoCard(imageSrc, bingoItems) {
+function generateBingoCard(bingoItems) {
     const bingoCard = [];
     while (bingoCard.length < 24) {
         const randomIndex = Math.floor(Math.random() * bingoItems.length);
         bingoCard.push(bingoItems.splice(randomIndex, 1)[0]);
     }
 
-    const bingoContent = document.getElementById('bingo-content');
+    const bingoContent = document.getElementById('bingo-card');
     bingoContent.innerHTML = ''; // Clear previous items
-
-    const cardFrame = document.getElementById('card-frame');
-    cardFrame.src = `./assets/${imageSrc}`; // Set the card frame image source
 
     const gridTemplate = [
         [0, 1, 2, 3, 4],
@@ -83,11 +80,11 @@ function generateBingoCard(imageSrc, bingoItems) {
             const div = document.createElement('div');
             if (cell === 'Free Space') {
                 div.textContent = 'Free Space';
-                div.style.fontWeight = 'bold';
+                div.className = 'bingo-cell free-space';
             } else {
                 div.textContent = bingoCard[cell];
+                div.className = 'bingo-cell';
             }
-            div.className = 'bingo-cell';
             bingoContent.appendChild(div);
         });
     });
