@@ -3,16 +3,13 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-    background: url('./assets/empty-debate-stage.png') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
 }
 
 .container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the index page */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -20,6 +17,7 @@ body {
 h1 {
     margin-bottom: 20px;
     font-size: 2em;
+    color: white;
 }
 
 button {
@@ -53,7 +51,7 @@ button:hover {
 
 #bingo-content {
     position: absolute;
-    top: 13%; /* Adjust these percentages to fit your card */
+    top: 13%;
     left: 13%;
     width: 74%;
     height: 74%;
@@ -75,7 +73,7 @@ button:hover {
     border: 1px solid transparent;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    font-size: 0.85em; /* Adjust font size based on the text */
+    font-size: 0.85em;
 }
 
 #bingo-content div {
