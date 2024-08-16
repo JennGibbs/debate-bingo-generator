@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walz Bingo Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body style="background-color: white;">
+    <div class="container">
+        <h1>Walz Debate Bingo Card</h1>
+        <div id="bingo-card">
+            <img id="card-frame" src="./assets/walz-bingo-card.png" alt="Bingo Card Frame">
+            <div id="bingo-content"></div>
+        </div>
+        <button onclick="generateWalzCard()">Generate Again</button>
+        <button onclick="window.print()">Print Bingo Card</button>
+        <button onclick="downloadPDF()">Download Bingo Card as PDF</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Automatically generate a Bingo card when the page loads
+        generateWalzCard();
+    </script>
+</body>
+</html>
