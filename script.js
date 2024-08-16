@@ -2,34 +2,38 @@ const items = {
     trump: [
         "Fake News", "China", "Make America Great Again", "Interrupts Moderator", "Criticizes the Media", 
         "Calls Someone a Nickname", "Huge", "Mentions the Border Wall", "Brags About the Economy", "Mentions Biden", 
-        "References the Military", "Mentions Drain the Swamp", "Discusses Election Fraud", "Mentions a Trade Deal", "References His Time in Office", 
-        "America First", "Mentions Law and Order", "Gestures with Hands", "Smirks or Smiles", "Talks About His Crowd Size",
-        "We're Winning", "Witch Hunt", "Points Finger", "Mentions Fake News Media", "Greatest in History",
-        "Nobody's Done More", "Radical Left", "Mentions His Businesses", "Hand Clenched Fist", "Believe Me"
+        "References the Military", "Mentions Drain the Swamp", "Discusses Election Fraud", "Mentions a Trade Deal", 
+        "References His Time in Office", "America First", "Mentions Law and Order", "Gestures with Hands", 
+        "Smirks or Smiles", "Talks About His Crowd Size", "We're Winning", "Witch Hunt", "Points Finger", 
+        "Mentions Fake News Media", "Greatest in History", "Nobody's Done More", "Radical Left", 
+        "Mentions His Businesses", "Hand Clenched Fist", "Believe Me"
     ],
     harris: [
-        "Let Me Be Clear", "Laughs or Giggles", "Mentions Working Families", "References Her Time as Attorney General", "Mentions Climate Change",
-        "Discusses Healthcare", "Talks About Women’s Rights", "References Biden Administration Policies", "Mentions Systemic Racism", "Criticizes Trump",
-        "Discusses Immigration Reform", "Justice or Equity", "Mentions Her Heritage", "Talks About Voting Rights", "Unity or Coming Together",
-        "Mentions the Supreme Court", "Gestures with Hands", "Smiles While Talking", "Talks About Education", "References Personal Stories",
-        "Let's Be Clear", "For the People", "We Must Fight", "Smiles Before Answering", "Protect Our Democracy",
-        "Injustice", "We Are Better Than This", "Nods While Listening", "Moral Obligation", "We Can't Afford To"
+        "Let Me Be Clear", "Laughs or Giggles", "Mentions Working Families", "References Her Time as Attorney General", 
+        "Mentions Climate Change", "Discusses Healthcare", "Talks About Women’s Rights", "References Biden Administration Policies", 
+        "Mentions Systemic Racism", "Criticizes Trump", "Discusses Immigration Reform", "Justice or Equity", "Mentions Her Heritage", 
+        "Talks About Voting Rights", "Unity or Coming Together", "Mentions the Supreme Court", "Gestures with Hands", 
+        "Smiles While Talking", "Talks About Education", "References Personal Stories", "Let's Be Clear", "For the People", 
+        "We Must Fight", "Smiles Before Answering", "Protect Our Democracy", "Injustice", "We Are Better Than This", 
+        "Nods While Listening", "Moral Obligation", "We Can't Afford To"
     ],
     vance: [
-        "Middle Class", "Mentions Hillbilly Elegy", "Criticizes Big Tech", "References Ohio", "Discusses Border Security",
-        "Mentions American Dream", "Talks About Working Families", "Criticizes the Biden Administration", "Pro-Life", "Mentions Drug Addiction Crisis",
-        "Rural America", "Discusses Military Service", "References China as a Threat", "Mentions Blue-Collar Workers", "Faith or Christian Values",
-        "Criticizes the Media", "Populism", "References His Family", "Discusses Tax Reform", "Talks About Manufacturing Jobs",
-        "Outsider", "Mentions Corporate Elites", "Working Class", "Discusses Veterans", "Economic Nationalism",
-        "Family Values", "Hand Gestures", "Mentions Opioid Crisis", "Criticizes Political Corruption", "References His Childhood"
+        "Middle Class", "Mentions Hillbilly Elegy", "Criticizes Big Tech", "References Ohio", "Discusses Border Security", 
+        "Mentions American Dream", "Talks About Working Families", "Criticizes the Biden Administration", "Pro-Life", 
+        "Mentions Drug Addiction Crisis", "Rural America", "Discusses Military Service", "References China as a Threat", 
+        "Mentions Blue-Collar Workers", "Faith or Christian Values", "Criticizes the Media", "Populism", "References His Family", 
+        "Discusses Tax Reform", "Talks About Manufacturing Jobs", "Outsider", "Mentions Corporate Elites", "Working Class", 
+        "Discusses Veterans", "Economic Nationalism", "Family Values", "Hand Gestures", "Mentions Opioid Crisis", 
+        "Criticizes Political Corruption", "References His Childhood"
     ],
     walz: [
-        "Mentions Minnesota", "References His Time as Governor", "Discusses COVID-19 Response", "Mentions Education", "Talks About Healthcare Access",
-        "Equity or Inclusion", "Criticizes Trump", "Mentions Climate Change Initiatives", "References the National Guard", "Discusses Infrastructure Investments",
-        "Mentions Public Safety", "Talks About Renewable Energy", "Affordable Housing", "Mentions Bipartisanship", "References Rural Communities",
-        "Discusses Police Reform", "Labor Unions", "Talks About Mental Health Services", "Mentions Voting Rights", "Social Justice",
-        "Minnesota Nice", "Discusses Public Schools", "Livability", "Public Safety", "Healthcare for All",
-        "Mentions Agriculture", "Economic Recovery", "Nods Head", "References Gun Control", "Diversity"
+        "Mentions Minnesota", "References His Time as Governor", "Discusses COVID-19 Response", "Mentions Education", 
+        "Talks About Healthcare Access", "Equity or Inclusion", "Criticizes Trump", "Mentions Climate Change Initiatives", 
+        "References the National Guard", "Discusses Infrastructure Investments", "Mentions Public Safety", "Talks About Renewable Energy", 
+        "Affordable Housing", "Mentions Bipartisanship", "References Rural Communities", "Discusses Police Reform", "Labor Unions", 
+        "Talks About Mental Health Services", "Mentions Voting Rights", "Social Justice", "Minnesota Nice", 
+        "Discusses Public Schools", "Livability", "Public Safety", "Healthcare for All", "Mentions Agriculture", 
+        "Economic Recovery", "Nods Head", "References Gun Control", "Diversity"
     ]
 };
 
@@ -74,8 +78,8 @@ function generateBingoCard(imageSrc, bingoItems) {
         [19, 20, 21, 22, 23]
     ];
 
-    gridTemplate.forEach((row, rowIndex) => {
-        row.forEach((cell, cellIndex) => {
+    gridTemplate.forEach((row) => {
+        row.forEach((cell) => {
             const div = document.createElement('div');
             if (cell === 'Free Space') {
                 div.textContent = 'Free Space';
