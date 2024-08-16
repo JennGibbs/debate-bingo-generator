@@ -33,8 +33,27 @@ const items = {
     ]
 };
 
-function generateCard(candidate) {
-    const bingoItems = [...items[candidate]];
+function generateTrumpCard() {
+    const bingoItems = [...items.trump];
+    generateBingoCard('trump-bingo-card.png', bingoItems);
+}
+
+function generateHarrisCard() {
+    const bingoItems = [...items.harris];
+    generateBingoCard('harris-bingo-card.png', bingoItems);
+}
+
+function generateVanceCard() {
+    const bingoItems = [...items.vance];
+    generateBingoCard('vance-bingo-card.png', bingoItems);
+}
+
+function generateWalzCard() {
+    const bingoItems = [...items.walz];
+    generateBingoCard('walz-bingo-card.png', bingoItems);
+}
+
+function generateBingoCard(imageSrc, bingoItems) {
     const bingoCard = [];
     while (bingoCard.length < 24) {
         const randomIndex = Math.floor(Math.random() * bingoItems.length);
@@ -45,7 +64,7 @@ function generateCard(candidate) {
     bingoContent.innerHTML = '';
 
     const cardFrame = document.getElementById('card-frame');
-    cardFrame.src = `./assets/${candidate}-bingo-card.png`;
+    cardFrame.src = `./assets/${imageSrc}`;
 
     const gridTemplate = [
         [0, 1, 2, 3, 4],
